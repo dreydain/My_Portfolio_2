@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #7e8c4a;
+}
+main {
+  min-height: 50em;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2 {
+  font-weight: 300;
+}
+/* 
+===============================================
+===			        NAV                     ===
+=============================================== 
+*/
+@media only screen and (min-width: 0em) {
+  .navbar {
+    background-color: #00060d;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 0.9em;
+  }
+  .navbar span {
+    margin-right: 10em;
+  }
+  /* 
+	===============================================
+	===			       LANDING                  ===
+	=============================================== 
+	*/
+  #hero .header {
+    position: relative;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #hero .overlay {
+    background-color: rgba(0, 6, 13, 0.5);
+    padding-top: 1.25em;
+    text-align: center;
+    font-size: 0.8em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  #hero .circle {
+    margin-top: 0.5em;
+    padding-top: 0.3em;
+    display: inline-block;
+    background-color: rgba(102, 106, 115, 0.7);
+    border-radius: 50%;
+    height: 2em;
+    width: 2em;
+  }
+  #hero .header-img {
+    max-width: 100%;
+  }
+  #hero .green-top {
+    position: absolute;
+    top: 10em;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  #hero .green-top svg {
+    position: relative;
+    display: block;
+    width: calc(147.3%);
+    height: 1.5em;
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  #hero .green-top .shape-fill {
+    fill: #7e8c4a;
+  }
+}
