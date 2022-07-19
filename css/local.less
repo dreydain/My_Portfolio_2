@@ -112,6 +112,12 @@ p {
 		}
 	}
 
+	/*
+	===============================================
+	===			       ABOUT                    ===
+	===============================================
+	*/
+
 	#about {
 		text-align: center;
 		color: white;
@@ -157,15 +163,13 @@ p {
 				margin-right: 0.75em;
 			}
 		}
-
-		.green-top {
-			bottom: -1em;
-		}
-
-		.green-top .shape-fill {
-			opacity: 0;
-		}
 	}
+
+	/*
+	===============================================
+	===			       SERVICES                 ===
+	===============================================
+	*/
 
 	#services {
 		position: relative;
@@ -219,30 +223,48 @@ p {
 			background-color: #fff;
 			margin-bottom: 0.5em;
 		}
+
+		.green-top {
+			top: -1em;
+			transform: rotate(180deg);
+		}
+
+		.green-top svg {
+			height: 2.5em;
+			transform: rotateY(360deg);
+		}
+
+		.green-bottom {
+			position: relative;
+			width: 100%;
+			bottom: -1em;
+			overflow: hidden;
+			line-height: 0;
+			transform: rotate(360deg);
+		}
+
+		.green-bottom svg {
+			position: relative;
+			display: block;
+			width: calc(146% + 1.3px);
+			height: 2.5em;
+			transform: rotateY(360deg);
+		}
+
+		.green-bottom .shape-fill {
+			fill: #7e8c4a;
+		}
 	}
 
-	// #services {
-	// 	text-align: center;
-	// 	color: #fff;
-	// 	font-size: 14/20em;
-	// 	padding-top: 2em;
+	/*
+	===============================================
+	===			       PORTFOLIO                ===
+	===============================================
+	*/
 
-	// 	.container {
-	// 		display: flex;
-	// 		flex-wrap: wrap;
-	// 	}
-
-	// 	h2 {
-	// 		font-weight: 500;
-	// 	}
-
-	// 	.card {
-	// 		display: flex;
-	// 		flex-direction: column;
-	// 		align-items: center;
-	// 		width: 10em;
-	// 		height: 11em;
-	// 		margin-top: 1em;
-	// 	}
-	// }
+	#portfolio {
+		text-align: center;
+		color: white;
+		font-size: 14/20em;
+	}
 }

@@ -103,6 +103,11 @@ p {
     left: 0;
     z-index: -10;
   }
+  /*
+	===============================================
+	===			       ABOUT                    ===
+	===============================================
+	*/
   #about {
     text-align: center;
     color: white;
@@ -144,12 +149,11 @@ p {
     background: #f27405;
     margin-right: 0.75em;
   }
-  #about .green-top {
-    bottom: -1em;
-  }
-  #about .green-top .shape-fill {
-    opacity: 0;
-  }
+  /*
+	===============================================
+	===			       SERVICES                 ===
+	===============================================
+	*/
   #services {
     position: relative;
     z-index: 1;
@@ -203,5 +207,45 @@ p {
   #services .white {
     background-color: #fff;
     margin-bottom: 0.5em;
+  }
+  #services .green-top {
+    top: -1em;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  #services .green-top svg {
+    height: 2.5em;
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  #services .green-bottom {
+    position: relative;
+    width: 100%;
+    bottom: -1em;
+    overflow: hidden;
+    line-height: 0;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  #services .green-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(147.3%);
+    height: 2.5em;
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  #services .green-bottom .shape-fill {
+    fill: #7e8c4a;
+  }
+  /*
+	===============================================
+	===			       PORTFOLIO                ===
+	===============================================
+	*/
+  #portfolio {
+    text-align: center;
+    color: white;
+    font-size: 0.7em;
   }
 }
