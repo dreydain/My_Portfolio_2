@@ -248,4 +248,121 @@ p {
     color: white;
     font-size: 0.7em;
   }
+  #portfolio h2 {
+    font-weight: 500;
+    padding-top: 1em;
+  }
+  #portfolio ul li {
+    display: inline-block;
+  }
+  #portfolio li a {
+    color: #fff;
+  }
+  #portfolio .container {
+    margin-top: 2em;
+    padding-bottom: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  #portfolio .project {
+    position: relative;
+  }
+  #portfolio .hover {
+    background-color: rgba(0, 6, 13, 0.7);
+    width: 7.65em;
+    height: 8.25em;
+    position: absolute;
+    top: 0em;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    display: none;
+  }
+  #portfolio .hover h4 {
+    padding: 1em 0 0.25em;
+  }
+  #portfolio .active {
+    display: block;
+  }
+  #portfolio .green-top {
+    position: relative;
+    width: 100%;
+    bottom: -0.5em;
+    overflow: hidden;
+    line-height: 0;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  #portfolio .green-top svg {
+    position: relative;
+    display: block;
+    width: calc(147.3%);
+    height: 2em;
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  #portfolio .green-top .shape-fill {
+    fill: #bf9b7a;
+  }
+  /*
+	===============================================
+	===			       TESTIMONIALS              ===
+	===============================================
+	*/
+  #testimonials {
+    text-align: center;
+    color: white;
+    font-size: 0.7em;
+    background-color: #bf9b7a;
+  }
+  #testimonials h4,
+  #testimonials h5 {
+    font-weight: 600;
+    color: #000;
+  }
+  #testimonials p {
+    padding: 0 1em 1em;
+  }
+  #testimonials .circle {
+    color: #000;
+  }
+  #testimonials .white {
+    background-color: #fff;
+    margin-bottom: 0.5em;
+  }
+  #testimonials #border {
+    border-color: #000;
+    border-style: solid;
+    border-width: 0.5em;
+    height: 3em;
+    width: 3em;
+    background-color: rgba(102, 106, 115, 0);
+    padding: 0;
+    margin: 1.5em;
+  }
+  #testimonials #border i {
+    font-size: 1.71428571em;
+  }
+  #testimonials #border .qoute {
+    padding: 0 1em 0 1em;
+  }
+  #testimonials .green-top {
+    top: 1em;
+  }
 }
