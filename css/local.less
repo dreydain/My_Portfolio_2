@@ -291,6 +291,7 @@ p {
 
 		.project {
 			position: relative;
+			margin: 0.25em 0.25em;
 		}
 
 		.hover {
@@ -388,6 +389,228 @@ p {
 
 		.green-top {
 			top: 1em;
+		}
+
+		.green-top svg {
+			height: 2.5em;
+		}
+	}
+
+	/*
+	===============================================
+	===			       PRICING                  ===
+	===============================================
+	*/
+
+	#pricing {
+		text-align: center;
+		color: white;
+		font-size: 14/20em;
+		margin-top: 3em;
+
+		h2,
+		h3 {
+			font-weight: 500;
+		}
+
+		h4 {
+			font-weight: 200;
+			margin: 0.5em 0;
+		}
+
+		h3 {
+			color: #fff;
+		}
+
+		#price {
+			color: #83a603;
+			margin-top: 0.5em;
+		}
+		.white {
+			background-color: #fff;
+			margin-bottom: 0.5em;
+			color: #000;
+		}
+
+		.container {
+			display: flex;
+			color: #666a73;
+			justify-content: center;
+			margin-top: 0.75em;
+			position: relative;
+
+			.card {
+				background-color: #fff;
+				border-style: solid;
+				border-color: #f27405;
+				border-width: 0.28em;
+				border-radius: 1em;
+
+				height: 20em;
+				width: 15em;
+
+				.head {
+					background-color: #f27405;
+					border-top-left-radius: 1em;
+					border-top-right-radius: 1em;
+					margin: -0.25em;
+				}
+
+				ul {
+					list-style: none;
+					text-align: left;
+					margin-left: 2.5em;
+				}
+
+				li {
+					margin-bottom: 1em;
+				}
+
+				li i {
+					color: #83a603;
+					margin-right: 0.75em;
+				}
+
+				.button {
+					color: #fff;
+					display: block;
+					display: inline-block;
+					background: #83a603;
+					padding: 0.3em 0.75em;
+					border-radius: 0.75em;
+					font-weight: 500;
+					margin: 0 0 1em 0;
+					text-decoration: none;
+				}
+			}
+
+			#standard {
+				z-index: 3;
+			}
+
+			#blog {
+				z-index: 2;
+				display: none;
+			}
+
+			#full-stack {
+				z-index: 1;
+				display: none;
+			}
+		}
+		.green-top {
+			bottom: -0.25em;
+			transform: rotate(360deg);
+		}
+
+		.green-top svg {
+			height: 2.5em;
+			transform: rotateY(360deg);
+		}
+
+		.green-top .shape-fill {
+			fill: #bf9b7a;
+		}
+	}
+
+	/*
+	===============================================
+	===			       CONTACT                  ===
+	===============================================
+	*/
+
+	#contact {
+		font-size: 14/20em;
+		background-color: #bf9b7a;
+		padding: 1em 0;
+		display: flex;
+
+		h2 {
+			font-weight: 500;
+			color: #fff;
+		}
+
+		p {
+			color: #323438;
+		}
+
+		.text {
+			margin: 1em 1.75em 1em 1em;
+			max-width: 40%;
+		}
+
+		#form {
+			margin-top: 4em;
+			input {
+				border-radius: 0.5em;
+				border-style: none;
+				margin-right: 0.25em;
+				margin-bottom: 0.5em;
+				width: 45%;
+				padding: 0.25em;
+			}
+
+			.input3 {
+				min-width: 93%;
+			}
+
+			textarea {
+				min-height: 100/20em;
+				min-width: 93%;
+				border-radius: 0.5em;
+				padding: 0.25em;
+				border: none;
+			}
+
+			.button {
+				background-color: #f27405;
+				font-size: 13/14em;
+				padding: 0.5em 0.75em;
+				border-radius: 1em;
+				border-style: none;
+				float: right;
+				margin-right: 1.2em;
+			}
+			::placeholder {
+				font-size: 10/14em;
+				font-family: 'Poppins', sans-serif;
+			}
+		}
+	}
+
+	/*
+	===============================================
+	===			       FOOTER                   ===
+	===============================================
+	*/
+
+	#footer {
+		font-size: 13/20em;
+		background-color: #666a73;
+		text-align: center;
+		color: #fff;
+
+		.circle {
+			margin: 1em 0.2em;
+			background-color: #bf9b7a;
+		}
+
+		ul li {
+			display: inline-block;
+		}
+
+		.green-top {
+			bottom: 0.25em;
+			transform: rotate(180deg);
+		}
+
+		.green-top svg {
+			height: 2.5em;
+			transform: rotateY(360deg);
+		}
+
+		.green-top .shape-fill {
+			fill: #bf9b7a;
 		}
 	}
 }

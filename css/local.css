@@ -275,6 +275,7 @@ p {
   }
   #portfolio .project {
     position: relative;
+    margin: 0.25em 0.25em;
   }
   #portfolio .hover {
     background-color: rgba(0, 6, 13, 0.7);
@@ -364,5 +365,213 @@ p {
   }
   #testimonials .green-top {
     top: 1em;
+  }
+  #testimonials .green-top svg {
+    height: 2.5em;
+  }
+  /*
+	===============================================
+	===			       PRICING                  ===
+	===============================================
+	*/
+  #pricing {
+    text-align: center;
+    color: white;
+    font-size: 0.7em;
+    margin-top: 3em;
+  }
+  #pricing h2,
+  #pricing h3 {
+    font-weight: 500;
+  }
+  #pricing h4 {
+    font-weight: 200;
+    margin: 0.5em 0;
+  }
+  #pricing h3 {
+    color: #fff;
+  }
+  #pricing #price {
+    color: #83a603;
+    margin-top: 0.5em;
+  }
+  #pricing .white {
+    background-color: #fff;
+    margin-bottom: 0.5em;
+    color: #000;
+  }
+  #pricing .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #666a73;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 0.75em;
+    position: relative;
+  }
+  #pricing .container .card {
+    background-color: #fff;
+    border-style: solid;
+    border-color: #f27405;
+    border-width: 0.28em;
+    border-radius: 1em;
+    height: 20em;
+    width: 15em;
+  }
+  #pricing .container .card .head {
+    background-color: #f27405;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    margin: -0.25em;
+  }
+  #pricing .container .card ul {
+    list-style: none;
+    text-align: left;
+    margin-left: 2.5em;
+  }
+  #pricing .container .card li {
+    margin-bottom: 1em;
+  }
+  #pricing .container .card li i {
+    color: #83a603;
+    margin-right: 0.75em;
+  }
+  #pricing .container .card .button {
+    color: #fff;
+    display: block;
+    display: inline-block;
+    background: #83a603;
+    padding: 0.3em 0.75em;
+    border-radius: 0.75em;
+    font-weight: 500;
+    margin: 0 0 1em 0;
+    text-decoration: none;
+  }
+  #pricing .container #standard {
+    z-index: 3;
+  }
+  #pricing .container #blog {
+    z-index: 2;
+    display: none;
+  }
+  #pricing .container #full-stack {
+    z-index: 1;
+    display: none;
+  }
+  #pricing .green-top {
+    bottom: -0.25em;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  #pricing .green-top svg {
+    height: 2.5em;
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  #pricing .green-top .shape-fill {
+    fill: #bf9b7a;
+  }
+  /*
+	===============================================
+	===			       CONTACT                  ===
+	===============================================
+	*/
+  #contact {
+    font-size: 0.7em;
+    background-color: #bf9b7a;
+    padding: 1em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #contact h2 {
+    font-weight: 500;
+    color: #fff;
+  }
+  #contact p {
+    color: #323438;
+  }
+  #contact .text {
+    margin: 1em 1.75em 1em 1em;
+    max-width: 40%;
+  }
+  #contact #form {
+    margin-top: 4em;
+  }
+  #contact #form input {
+    border-radius: 0.5em;
+    border-style: none;
+    margin-right: 0.25em;
+    margin-bottom: 0.5em;
+    width: 45%;
+    padding: 0.25em;
+  }
+  #contact #form .input3 {
+    min-width: 93%;
+  }
+  #contact #form textarea {
+    min-height: 5em;
+    min-width: 93%;
+    border-radius: 0.5em;
+    padding: 0.25em;
+    border: none;
+  }
+  #contact #form .button {
+    background-color: #f27405;
+    font-size: 0.92857143em;
+    padding: 0.5em 0.75em;
+    border-radius: 1em;
+    border-style: none;
+    float: right;
+    margin-right: 1.2em;
+  }
+  #contact #form ::-webkit-input-placeholder {
+    font-size: 0.71428571em;
+    font-family: 'Poppins', sans-serif;
+  }
+  #contact #form :-ms-input-placeholder {
+    font-size: 0.71428571em;
+    font-family: 'Poppins', sans-serif;
+  }
+  #contact #form ::-ms-input-placeholder {
+    font-size: 0.71428571em;
+    font-family: 'Poppins', sans-serif;
+  }
+  #contact #form ::placeholder {
+    font-size: 0.71428571em;
+    font-family: 'Poppins', sans-serif;
+  }
+  /*
+	===============================================
+	===			       FOOTER                   ===
+	===============================================
+	*/
+  #footer {
+    font-size: 0.65em;
+    background-color: #666a73;
+    text-align: center;
+    color: #fff;
+  }
+  #footer .circle {
+    margin: 1em 0.2em;
+    background-color: #bf9b7a;
+  }
+  #footer ul li {
+    display: inline-block;
+  }
+  #footer .green-top {
+    bottom: 0.25em;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  #footer .green-top svg {
+    height: 2.5em;
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  #footer .green-top .shape-fill {
+    fill: #bf9b7a;
   }
 }

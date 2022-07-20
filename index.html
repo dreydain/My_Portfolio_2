@@ -131,7 +131,7 @@
 						src="images/portrait.jpg"
 						alt="portrait"
 						width="113"
-						height="188"
+						height="180"
 					/>
 					<div class="text">
 						<h2>A little about me</h2>
@@ -399,48 +399,52 @@
 			<section id="pricing">
 				<h2>Pricing</h2>
 				<div class="container">
-					<div class="card price">
+					<div class="card price" id="blog">
 						<div class="head">
-							<h4>Standard</h4>
+							<h3>Standard</h3>
 						</div>
-						<span>5 Pages</span>
+						<h4>5 Pages</h4>
 						<ul>
 							<li><i class="fa-solid fa-circle-check"></i> Unlimited Edits</li>
 							<li><i class="fa-solid fa-circle-check"></i> Includes Hosting</li>
 							<li><i class="fa-solid fa-circle-check"></i> 24/7 Service</li>
 							<li><i class="fa-solid fa-circle-check"></i> Lifetime Updates</li>
 						</ul>
+						<a href="contact.html" class="button"> Contact Us </a>
 					</div>
-					<div class="card price">
+					<div class="card price" id="standard">
 						<div class="head">
-							<h4>Standard</h4>
+							<h3>Standard</h3>
 						</div>
-						<span>5 Pages</span>
+						<h4>5 Pages</h4>
+						<h3 id="price"><i class="fa-solid fa-dollar-sign"></i>150/mo</h3>
 						<ul>
 							<li><i class="fa-solid fa-circle-check"></i> Unlimited Edits</li>
 							<li><i class="fa-solid fa-circle-check"></i> Includes Hosting</li>
 							<li><i class="fa-solid fa-circle-check"></i> 24/7 Service</li>
 							<li><i class="fa-solid fa-circle-check"></i> Lifetime Updates</li>
 						</ul>
+						<a href="contact.html" class="button"> Contact Us </a>
 					</div>
-					<div class="card price">
+					<div class="card price" id="full-stack">
 						<div class="head">
-							<h4>Standard</h4>
+							<h3>Standard</h3>
 						</div>
-						<span>5 Pages</span>
+						<h4>5 Pages</h4>
 						<ul>
 							<li><i class="fa-solid fa-circle-check"></i> Unlimited Edits</li>
 							<li><i class="fa-solid fa-circle-check"></i> Includes Hosting</li>
 							<li><i class="fa-solid fa-circle-check"></i> 24/7 Service</li>
 							<li><i class="fa-solid fa-circle-check"></i> Lifetime Updates</li>
 						</ul>
+						<a href="contact.html" class="button"> Contact Us </a>
 					</div>
-				</div>
-				<div class="circle white">
-					<i class="fa-solid fa-angle-right"></i>
 				</div>
 				<div class="circle white">
 					<i class="fa-solid fa-angle-left"></i>
+				</div>
+				<div class="circle white">
+					<i class="fa-solid fa-angle-right"></i>
 				</div>
 				<div class="green-top">
 					<svg
@@ -462,76 +466,77 @@
 			<!-- ============================================ -->
 
 			<section id="contact">
-				<h2>Contanct Me</h2>
-				<span>PHONE:</span>
-				<p>360-488-6601</p>
-				<span>ADDRESS:</span>
-				<p>27098 Hoehn Rd, Sedro-Woolley</p>
-				<span>EMAIL:</span>
-				<p>name@address.com</p>
-				<form id="contact" name="Contact Form" method="post">
-					<div class="input-group">
-						<input
-							id="name"
-							aria-label="name"
-							class="input1"
-							name="name"
-							placeholder="Name"
-							type="text"
-							tabindex="1"
-							required
-						/>
-					</div>
+				<div class="text">
+					<h2>Contact Me</h2>
+					<h4>PHONE:</h4>
+					<p>360-488-6601</p>
+					<h4>ADDRESS:</h4>
+					<p>27098 Hoehn Rd, Sedro-Woolley</p>
+					<h4>EMAIL:</h4>
+					<p>name@address.com</p>
+				</div>
 
-					<div class="input-group">
-						<input
-							id="email"
-							aria-label="email"
-							class="input1 right"
-							name="email"
-							placeholder="Email"
-							type="email"
-							tabindex="2"
-							required
-						/>
-					</div>
+				<form id="form" name="Contact Form" method="post">
+					<input
+						id="name"
+						aria-label="name"
+						class="input1"
+						name="name"
+						placeholder="Name"
+						type="text"
+						tabindex="1"
+						required
+					/>
 
-					<div class="input-group">
-						<input
-							id="subject"
-							aria-label="subject"
-							class="input2"
-							name="subject"
-							placeholder="subject"
-							type="subject"
-							tabindex="3"
-							required
-						/>
-					</div>
+					<input
+						id="email"
+						aria-label="email"
+						class="input2"
+						name="email"
+						placeholder="Email"
+						type="email"
+						tabindex="2"
+						required
+					/>
 
-					<div class="input-group textarea">
-						<textarea
-							id="message"
-							aria-label="write your message"
-							name="message"
-							placeholder="Message"
-							tabindex="4"
-							required
-						></textarea>
-					</div>
-					<p class="form-submit">
-						<button
-							name="submit"
-							type="submit"
-							id="contact-submit"
-							class="button-solid"
-							data-submit="...Sending"
-						>
-							Send Message
-						</button>
-					</p>
+					<input
+						id="subject"
+						aria-label="subject"
+						class="input3"
+						name="subject"
+						placeholder="Subject"
+						type="subject"
+						tabindex="3"
+						required
+					/>
+
+					<textarea
+						id="message"
+						aria-label="write your message"
+						name="message"
+						placeholder="Message"
+						tabindex="4"
+						required
+					></textarea>
+
+					<button
+						name="submit"
+						type="submit"
+						id="contact-submit"
+						class="button"
+						data-submit="...Sending"
+					>
+						Send Message
+					</button>
 				</form>
 			</section>
+		</main>
+
+		<!-- ============================================ -->
+		<!--                     FOOTER                   -->
+		<!-- ============================================ -->
+
+		<footer id="footer">
 			<div class="green-top">
 				<svg
 					data-name="Layer 1"
@@ -545,13 +550,6 @@
 					></path>
 				</svg>
 			</div>
-		</main>
-
-		<!-- ============================================ -->
-		<!--                     FOOTER                   -->
-		<!-- ============================================ -->
-
-		<footer id="footer">
 			<div class="circle">
 				<i class="fa-brands fa-git"></i>
 			</div>
