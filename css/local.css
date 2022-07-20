@@ -32,12 +32,13 @@ p {
   line-height: 0;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
+  top: 0.2em;
 }
 .green-top svg {
   position: relative;
   display: block;
   width: calc(147.3%);
-  height: 2em;
+  height: 2.5em;
   -webkit-transform: rotateY(360deg);
           transform: rotateY(360deg);
 }
@@ -89,7 +90,7 @@ p {
     background-repeat: no-repeat;
     text-align: center;
     color: white;
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
   #hero:before {
     content: '';
@@ -144,6 +145,8 @@ p {
     font-weight: 500;
     margin: 0 0 1em 0;
     text-decoration: none;
+    -webkit-box-shadow: 0.1em 0.2em 0.1em rgba(0, 6, 13, 0.25);
+            box-shadow: 0.1em 0.2em 0.1em rgba(0, 6, 13, 0.25);
   }
   #about .text #btn1 {
     background: #f27405;
@@ -346,6 +349,8 @@ p {
   #testimonials .white {
     background-color: #fff;
     margin-bottom: 0.5em;
+    -webkit-box-shadow: 0.1em 0.4em 0.2em rgba(0, 6, 13, 0.5);
+            box-shadow: 0.1em 0.4em 0.2em rgba(0, 6, 13, 0.5);
   }
   #testimonials #border {
     border-color: #000;
@@ -399,6 +404,8 @@ p {
     background-color: #fff;
     margin-bottom: 0.5em;
     color: #000;
+    -webkit-box-shadow: 0.1em 0.4em 0.2em rgba(0, 6, 13, 0.5);
+            box-shadow: 0.1em 0.4em 0.2em rgba(0, 6, 13, 0.5);
   }
   #pricing .container {
     display: -webkit-box;
@@ -526,6 +533,8 @@ p {
     border-style: none;
     float: right;
     margin-right: 1.2em;
+    -webkit-box-shadow: 0.1em 0.2em 0.1em rgba(0, 6, 13, 0.25);
+            box-shadow: 0.1em 0.2em 0.1em rgba(0, 6, 13, 0.25);
   }
   #contact #form ::-webkit-input-placeholder {
     font-size: 0.71428571em;
@@ -562,12 +571,11 @@ p {
     display: inline-block;
   }
   #footer .green-top {
-    bottom: 0.25em;
+    top: -1em;
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
   }
   #footer .green-top svg {
-    height: 2.5em;
     -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
   }

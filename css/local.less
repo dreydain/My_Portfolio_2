@@ -37,13 +37,14 @@ p {
 	overflow: hidden;
 	line-height: 0;
 	transform: rotate(360deg);
+	top: 0.2em;
 }
 
 .green-top svg {
 	position: relative;
 	display: block;
 	width: calc(146% + 1.3px);
-	height: 2em;
+	height: 2.5em;
 	transform: rotateY(360deg);
 }
 
@@ -96,7 +97,7 @@ p {
 
 		text-align: center;
 		color: white;
-		font-size: 16/20em;
+		font-size: 14/20em;
 
 		&:before {
 			content: '';
@@ -156,6 +157,7 @@ p {
 				font-weight: 500;
 				margin: 0 0 1em 0;
 				text-decoration: none;
+				box-shadow: 0.1em 0.2em 0.1em rgba(0, 6, 13, 0.25);
 			}
 
 			#btn1 {
@@ -366,6 +368,7 @@ p {
 		.white {
 			background-color: #fff;
 			margin-bottom: 0.5em;
+			box-shadow: 0.1em 0.4em 0.2em rgba(0, 6, 13, 0.5);
 		}
 
 		#border {
@@ -430,6 +433,7 @@ p {
 			background-color: #fff;
 			margin-bottom: 0.5em;
 			color: #000;
+			box-shadow: 0.1em 0.4em 0.2em rgba(0, 6, 13, 0.5);
 		}
 
 		.container {
@@ -570,6 +574,7 @@ p {
 				border-style: none;
 				float: right;
 				margin-right: 1.2em;
+				box-shadow: 0.1em 0.2em 0.1em rgba(0, 6, 13, 0.25);
 			}
 			::placeholder {
 				font-size: 10/14em;
@@ -600,12 +605,11 @@ p {
 		}
 
 		.green-top {
-			bottom: 0.25em;
+			top: -1em;
 			transform: rotate(180deg);
 		}
 
 		.green-top svg {
-			height: 2.5em;
 			transform: rotateY(360deg);
 		}
 
