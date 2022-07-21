@@ -104,6 +104,9 @@ p {
     left: 0;
     z-index: -10;
   }
+  #hero .header {
+    padding: 4em 0;
+  }
   /*
 	===============================================
 	===			       ABOUT                    ===
@@ -383,52 +386,40 @@ p {
     text-align: center;
     color: white;
     font-size: 0.7em;
-    margin-top: 3em;
+    margin-top: 1em;
   }
   #pricing h2,
   #pricing h3 {
     font-weight: 500;
+    color: #fff;
   }
   #pricing h4 {
     font-weight: 200;
     margin: 0.5em 0;
   }
-  #pricing h3 {
-    color: #fff;
-  }
   #pricing #price {
     color: #83a603;
-    margin-top: 0.5em;
+    margin: 0.5em;
   }
   #pricing .white {
-    background-color: #fff;
-    margin-bottom: 0.5em;
-    color: #000;
-    -webkit-box-shadow: 0.1em 0.4em 0.2em rgba(0, 6, 13, 0.5);
-            box-shadow: 0.1em 0.4em 0.2em rgba(0, 6, 13, 0.5);
+    display: none;
   }
   #pricing .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     color: #666a73;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     margin-top: 0.75em;
-    position: relative;
   }
   #pricing .container .card {
     background-color: #fff;
     border-style: solid;
-    border-color: #f27405;
+    border-color: #666a73;
     border-width: 0.28em;
     border-radius: 1em;
     height: 20em;
-    width: 15em;
+    width: 16em;
+    margin: 1em auto;
   }
   #pricing .container .card .head {
-    background-color: #f27405;
+    background-color: #666a73;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
     margin: -0.25em;
@@ -455,17 +446,6 @@ p {
     font-weight: 500;
     margin: 0 0 1em 0;
     text-decoration: none;
-  }
-  #pricing .container #standard {
-    z-index: 3;
-  }
-  #pricing .container #blog {
-    z-index: 2;
-    display: none;
-  }
-  #pricing .container #full-stack {
-    z-index: 1;
-    display: none;
   }
   #pricing .green-top {
     bottom: -0.25em;
