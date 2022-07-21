@@ -14,27 +14,77 @@ body {
 main {
   min-height: 50em;
 }
+section {
+  text-align: center;
+  font-size: 0.7em;
+  padding-top: 1em;
+  color: #fff;
+}
+h2 {
+  font-weight: 500;
+}
 a {
   text-decoration: none;
 }
-h1,
-h2 {
-  font-weight: 300;
-  padding-bottom: 0.5em;
-}
 p {
   padding-bottom: 1.5em;
+}
+.flex-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.button {
+  color: #000;
+  display: block;
+  display: inline-block;
+  background: #fff;
+  padding: 0.3em 0.75em;
+  border-radius: 1.5em;
+  font-weight: 500;
+  margin: 0 0 1em 0;
+  text-decoration: none;
+  -webkit-box-shadow: 0.1em 0.2em 0.1em rgba(0, 6, 13, 0.25);
+          box-shadow: 0.1em 0.2em 0.1em rgba(0, 6, 13, 0.25);
 }
 .green-top {
   position: relative;
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   top: 0.2em;
 }
 .green-top svg {
+  position: relative;
+  display: block;
+  width: calc(147.3%);
+  height: 2.75em;
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+.green-top .shape-fill {
+  fill: #7e8c4a;
+}
+.green-bottom {
+  position: relative;
+  width: 100%;
+  bottom: -1em;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+.green-bottom svg {
   position: relative;
   display: block;
   width: calc(147.3%);
@@ -42,7 +92,7 @@ p {
   -webkit-transform: rotateY(360deg);
           transform: rotateY(360deg);
 }
-.green-top .shape-fill {
+.green-bottom .shape-fill {
   fill: #7e8c4a;
 }
 .circle {
@@ -60,7 +110,10 @@ p {
 =============================================== 
 */
 @media only screen and (min-width: 0em) {
-  .navbar {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
     background-color: #00060d;
     color: white;
     display: -webkit-box;
@@ -72,8 +125,9 @@ p {
         -ms-flex-align: center;
             align-items: center;
     font-size: 0.7em;
+    width: 100vw;
   }
-  .navbar span {
+  .mobile-nav span {
     margin-right: 10em;
   }
   /*
@@ -88,9 +142,6 @@ p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    text-align: center;
-    color: white;
-    font-size: 0.7em;
   }
   #hero:before {
     content: '';
@@ -105,18 +156,17 @@ p {
     z-index: -10;
   }
   #hero .header {
-    padding: 4em 0;
+    padding: 1.5em 0;
+  }
+  #hero .header h1,
+  #hero .header h2 {
+    font-weight: 300;
   }
   /*
 	===============================================
 	===			       ABOUT                    ===
 	===============================================
 	*/
-  #about {
-    text-align: center;
-    color: white;
-    font-size: 0.7em;
-  }
   #about .qoute {
     padding: 0 2.5em;
     font-weight: 300;
@@ -135,22 +185,6 @@ p {
     padding-left: 1em;
     text-align: left;
   }
-  #about .text h2 {
-    font-weight: 500;
-  }
-  #about .text .button {
-    color: #000;
-    display: block;
-    display: inline-block;
-    background: #fff;
-    padding: 0.3em 0.75em;
-    border-radius: 1.5em;
-    font-weight: 500;
-    margin: 0 0 1em 0;
-    text-decoration: none;
-    -webkit-box-shadow: 0.1em 0.2em 0.1em rgba(0, 6, 13, 0.25);
-            box-shadow: 0.1em 0.2em 0.1em rgba(0, 6, 13, 0.25);
-  }
   #about .text #btn1 {
     background: #f27405;
     margin-right: 0.75em;
@@ -167,9 +201,6 @@ p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    text-align: center;
-    color: white;
-    font-size: 0.7em;
   }
   #services:before {
     content: '';
@@ -183,26 +214,9 @@ p {
     left: 0;
     z-index: -10;
   }
-  #services h2 {
-    font-weight: 500;
-    padding-top: 1em;
-  }
   #services h4 {
     font-weight: 500;
     padding-bottom: 0.5em;
-  }
-  #services .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
   }
   #services .card {
     width: 12em;
@@ -210,54 +224,18 @@ p {
   #services i {
     color: #000;
   }
-  #services .white {
+  #services .circle {
     background-color: #fff;
     margin-bottom: 0.5em;
   }
   #services .green-top {
     top: -1em;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  #services .green-top svg {
-    height: 2.5em;
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
-  #services .green-bottom {
-    position: relative;
-    width: 100%;
-    bottom: -1em;
-    overflow: hidden;
-    line-height: 0;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  #services .green-bottom svg {
-    position: relative;
-    display: block;
-    width: calc(147.3%);
-    height: 2.5em;
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
-  #services .green-bottom .shape-fill {
-    fill: #7e8c4a;
   }
   /*
 	===============================================
 	===			       PORTFOLIO                ===
 	===============================================
 	*/
-  #portfolio {
-    text-align: center;
-    color: white;
-    font-size: 0.7em;
-  }
-  #portfolio h2 {
-    font-weight: 500;
-    padding-top: 1em;
-  }
   #portfolio ul li {
     display: inline-block;
   }
@@ -267,17 +245,6 @@ p {
   #portfolio .container {
     margin-top: 2em;
     padding-bottom: 3em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
   }
   #portfolio .project {
     position: relative;
@@ -289,7 +256,6 @@ p {
     height: 8.25em;
     position: absolute;
     top: 0em;
-    text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -307,24 +273,7 @@ p {
   #portfolio .active {
     display: block;
   }
-  #portfolio .green-top {
-    position: relative;
-    width: 100%;
-    bottom: -0.5em;
-    overflow: hidden;
-    line-height: 0;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  #portfolio .green-top svg {
-    position: relative;
-    display: block;
-    width: calc(147.3%);
-    height: 2em;
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
-  #portfolio .green-top .shape-fill {
+  #portfolio .green-bottom .shape-fill {
     fill: #bf9b7a;
   }
   /*
@@ -333,9 +282,6 @@ p {
 	===============================================
 	*/
   #testimonials {
-    text-align: center;
-    color: white;
-    font-size: 0.7em;
     background-color: #bf9b7a;
   }
   #testimonials h4,
@@ -348,8 +294,6 @@ p {
   }
   #testimonials .circle {
     color: #000;
-  }
-  #testimonials .white {
     background-color: #fff;
     margin-bottom: 0.5em;
     -webkit-box-shadow: 0.1em 0.4em 0.2em rgba(0, 6, 13, 0.5);
@@ -358,11 +302,11 @@ p {
   #testimonials #border {
     border-color: #000;
     border-style: solid;
-    border-width: 0.5em;
+    border-width: 0.45em;
     height: 3em;
     width: 3em;
     background-color: rgba(102, 106, 115, 0);
-    padding: 0;
+    padding-top: 0.3em;
     margin: 1.5em;
   }
   #testimonials #border i {
@@ -374,21 +318,14 @@ p {
   #testimonials .green-top {
     top: 1em;
   }
-  #testimonials .green-top svg {
-    height: 2.5em;
-  }
   /*
 	===============================================
 	===			       PRICING                  ===
 	===============================================
 	*/
   #pricing {
-    text-align: center;
-    color: white;
-    font-size: 0.7em;
     margin-top: 1em;
   }
-  #pricing h2,
   #pricing h3 {
     font-weight: 500;
     color: #fff;
@@ -401,7 +338,7 @@ p {
     color: #83a603;
     margin: 0.5em;
   }
-  #pricing .white {
+  #pricing .circle {
     display: none;
   }
   #pricing .container {
@@ -438,26 +375,9 @@ p {
   }
   #pricing .container .card .button {
     color: #fff;
-    display: block;
-    display: inline-block;
     background: #83a603;
-    padding: 0.3em 0.75em;
-    border-radius: 0.75em;
-    font-weight: 500;
-    margin: 0 0 1em 0;
-    text-decoration: none;
   }
-  #pricing .green-top {
-    bottom: -0.25em;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  #pricing .green-top svg {
-    height: 2.5em;
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
-  #pricing .green-top .shape-fill {
+  #pricing .green-bottom .shape-fill {
     fill: #bf9b7a;
   }
   /*
@@ -466,15 +386,15 @@ p {
 	===============================================
 	*/
   #contact {
-    font-size: 0.7em;
     background-color: #bf9b7a;
-    padding: 1em 0;
+    color: #00060d;
+    text-align: left;
+    padding-bottom: 1em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
   #contact h2 {
-    font-weight: 500;
     color: #fff;
   }
   #contact p {
@@ -508,13 +428,9 @@ p {
   #contact #form .button {
     background-color: #f27405;
     font-size: 0.92857143em;
-    padding: 0.5em 0.75em;
-    border-radius: 1em;
     border-style: none;
     float: right;
     margin-right: 1.2em;
-    -webkit-box-shadow: 0.1em 0.2em 0.1em rgba(0, 6, 13, 0.25);
-            box-shadow: 0.1em 0.2em 0.1em rgba(0, 6, 13, 0.25);
   }
   #contact #form ::-webkit-input-placeholder {
     font-size: 0.71428571em;
@@ -552,12 +468,6 @@ p {
   }
   #footer .green-top {
     top: -1em;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  #footer .green-top svg {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
   }
   #footer .green-top .shape-fill {
     fill: #bf9b7a;

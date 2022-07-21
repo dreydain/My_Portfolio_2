@@ -17,18 +17,43 @@ main {
 	min-height: 1000/20em;
 }
 
+section {
+	text-align: center;
+	font-size: 14/20em;
+	padding-top: 1em;
+	color: #fff;
+}
+
+h2 {
+	font-weight: 500;
+}
+
 a {
 	text-decoration: none;
 }
 
-h1,
-h2 {
-	font-weight: 300;
-	padding-bottom: 0.5em;
-}
-
 p {
 	padding-bottom: 1.5em;
+}
+
+.flex-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	justify-content: space-evenly;
+}
+
+.button {
+	color: #000;
+	display: block;
+	display: inline-block;
+	background: #fff;
+	padding: 0.3em 0.75em;
+	border-radius: 1.5em;
+	font-weight: 500;
+	margin: 0 0 1em 0;
+	text-decoration: none;
+	box-shadow: 0.1em 0.2em 0.1em rgba(0, 6, 13, 0.25);
 }
 
 .green-top {
@@ -36,7 +61,7 @@ p {
 	width: 100%;
 	overflow: hidden;
 	line-height: 0;
-	transform: rotate(360deg);
+	transform: rotate(180deg);
 	top: 0.2em;
 }
 
@@ -44,11 +69,32 @@ p {
 	position: relative;
 	display: block;
 	width: calc(146% + 1.3px);
-	height: 2.5em;
+	height: 2.75em;
 	transform: rotateY(360deg);
 }
 
 .green-top .shape-fill {
+	fill: #7e8c4a;
+}
+
+.green-bottom {
+	position: relative;
+	width: 100%;
+	bottom: -1em;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(360deg);
+}
+
+.green-bottom svg {
+	position: relative;
+	display: block;
+	width: calc(146% + 1.3px);
+	height: 2.5em;
+	transform: rotateY(360deg);
+}
+
+.green-bottom .shape-fill {
 	fill: #7e8c4a;
 }
 
@@ -69,16 +115,20 @@ p {
 */
 
 @media only screen and (min-width: 0em) {
-	.navbar {
+	.desktop-nav {
+		display: none;
+	}
+	.mobile-nav {
 		background-color: rgb(0, 6, 13);
 		color: white;
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
 		font-size: 14/20em;
+		width: 100vw;
 	}
 
-	.navbar span {
+	.mobile-nav span {
 		margin-right: 10em;
 	}
 
@@ -95,10 +145,6 @@ p {
 		background-position: center;
 		background-repeat: no-repeat;
 
-		text-align: center;
-		color: white;
-		font-size: 14/20em;
-
 		&:before {
 			content: '';
 			position: absolute;
@@ -113,7 +159,12 @@ p {
 		}
 
 		.header {
-			padding: 4em 0;
+			padding: 1.5em 0;
+
+			h1,
+			h2 {
+				font-weight: 300;
+			}
 		}
 	}
 
@@ -124,10 +175,6 @@ p {
 	*/
 
 	#about {
-		text-align: center;
-		color: white;
-		font-size: 14/20em;
-
 		.qoute {
 			padding: 0 2.5em;
 			font-weight: 300;
@@ -146,23 +193,6 @@ p {
 		.text {
 			padding-left: 1em;
 			text-align: left;
-
-			h2 {
-				font-weight: 500;
-			}
-
-			.button {
-				color: #000;
-				display: block;
-				display: inline-block;
-				background: #fff;
-				padding: 0.3em 0.75em;
-				border-radius: 1.5em;
-				font-weight: 500;
-				margin: 0 0 1em 0;
-				text-decoration: none;
-				box-shadow: 0.1em 0.2em 0.1em rgba(0, 6, 13, 0.25);
-			}
 
 			#btn1 {
 				background: #f27405;
@@ -184,9 +214,6 @@ p {
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-		text-align: center;
-		color: white;
-		font-size: 14/20em;
 
 		&:before {
 			content: '';
@@ -201,22 +228,11 @@ p {
 			z-index: -10;
 		}
 
-		h2 {
-			font-weight: 500;
-			padding-top: 1em;
-		}
-
 		h4 {
 			font-weight: 500;
 			padding-bottom: 0.5em;
 		}
 
-		.container {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			justify-content: space-evenly;
-		}
 		.card {
 			width: 12em;
 		}
@@ -225,40 +241,13 @@ p {
 			color: #000;
 		}
 
-		.white {
+		.circle {
 			background-color: #fff;
 			margin-bottom: 0.5em;
 		}
 
 		.green-top {
 			top: -1em;
-			transform: rotate(180deg);
-		}
-
-		.green-top svg {
-			height: 2.5em;
-			transform: rotateY(360deg);
-		}
-
-		.green-bottom {
-			position: relative;
-			width: 100%;
-			bottom: -1em;
-			overflow: hidden;
-			line-height: 0;
-			transform: rotate(360deg);
-		}
-
-		.green-bottom svg {
-			position: relative;
-			display: block;
-			width: calc(146% + 1.3px);
-			height: 2.5em;
-			transform: rotateY(360deg);
-		}
-
-		.green-bottom .shape-fill {
-			fill: #7e8c4a;
 		}
 	}
 
@@ -269,15 +258,6 @@ p {
 	*/
 
 	#portfolio {
-		text-align: center;
-		color: white;
-		font-size: 14/20em;
-
-		h2 {
-			font-weight: 500;
-			padding-top: 1em;
-		}
-
 		ul li {
 			display: inline-block;
 		}
@@ -289,10 +269,6 @@ p {
 		.container {
 			margin-top: 2em;
 			padding-bottom: 3em;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			justify-content: space-evenly;
 		}
 
 		.project {
@@ -306,7 +282,6 @@ p {
 			height: 8.25em;
 			position: absolute;
 			top: 0em;
-			text-align: center;
 			display: flex;
 			flex-direction: column;
 			align-content: space-between;
@@ -321,24 +296,7 @@ p {
 			display: block;
 		}
 
-		.green-top {
-			position: relative;
-			width: 100%;
-			bottom: -0.5em;
-			overflow: hidden;
-			line-height: 0;
-			transform: rotate(360deg);
-		}
-
-		.green-top svg {
-			position: relative;
-			display: block;
-			width: calc(146% + 1.3px);
-			height: 2em;
-			transform: rotateY(360deg);
-		}
-
-		.green-top .shape-fill {
+		.green-bottom .shape-fill {
 			fill: #bf9b7a;
 		}
 	}
@@ -350,9 +308,6 @@ p {
 	*/
 
 	#testimonials {
-		text-align: center;
-		color: white;
-		font-size: 14/20em;
 		background-color: #bf9b7a;
 
 		h4,
@@ -367,9 +322,6 @@ p {
 
 		.circle {
 			color: #000;
-		}
-
-		.white {
 			background-color: #fff;
 			margin-bottom: 0.5em;
 			box-shadow: 0.1em 0.4em 0.2em rgba(0, 6, 13, 0.5);
@@ -378,11 +330,11 @@ p {
 		#border {
 			border-color: #000;
 			border-style: solid;
-			border-width: 0.5em;
+			border-width: 0.45em;
 			height: 3em;
 			width: 3em;
 			background-color: rgba(102, 106, 115, 0);
-			padding: 0;
+			padding-top: 0.3em;
 			margin: 1.5em;
 
 			i {
@@ -397,10 +349,6 @@ p {
 		.green-top {
 			top: 1em;
 		}
-
-		.green-top svg {
-			height: 2.5em;
-		}
 	}
 
 	/*
@@ -410,12 +358,8 @@ p {
 	*/
 
 	#pricing {
-		text-align: center;
-		color: white;
-		font-size: 14/20em;
 		margin-top: 1em;
 
-		h2,
 		h3 {
 			font-weight: 500;
 			color: #fff;
@@ -430,7 +374,7 @@ p {
 			color: #83a603;
 			margin: 0.5em;
 		}
-		.white {
+		.circle {
 			display: none;
 		}
 
@@ -472,28 +416,12 @@ p {
 
 				.button {
 					color: #fff;
-					display: block;
-					display: inline-block;
 					background: #83a603;
-					padding: 0.3em 0.75em;
-					border-radius: 0.75em;
-					font-weight: 500;
-					margin: 0 0 1em 0;
-					text-decoration: none;
 				}
 			}
 		}
-		.green-top {
-			bottom: -0.25em;
-			transform: rotate(360deg);
-		}
 
-		.green-top svg {
-			height: 2.5em;
-			transform: rotateY(360deg);
-		}
-
-		.green-top .shape-fill {
+		.green-bottom .shape-fill {
 			fill: #bf9b7a;
 		}
 	}
@@ -505,13 +433,13 @@ p {
 	*/
 
 	#contact {
-		font-size: 14/20em;
 		background-color: #bf9b7a;
-		padding: 1em 0;
+		color: #00060d;
+		text-align: left;
+		padding-bottom: 1em;
 		display: flex;
 
 		h2 {
-			font-weight: 500;
 			color: #fff;
 		}
 
@@ -550,12 +478,9 @@ p {
 			.button {
 				background-color: #f27405;
 				font-size: 13/14em;
-				padding: 0.5em 0.75em;
-				border-radius: 1em;
 				border-style: none;
 				float: right;
 				margin-right: 1.2em;
-				box-shadow: 0.1em 0.2em 0.1em rgba(0, 6, 13, 0.25);
 			}
 			::placeholder {
 				font-size: 10/14em;
@@ -587,11 +512,6 @@ p {
 
 		.green-top {
 			top: -1em;
-			transform: rotate(180deg);
-		}
-
-		.green-top svg {
-			transform: rotateY(360deg);
 		}
 
 		.green-top .shape-fill {
