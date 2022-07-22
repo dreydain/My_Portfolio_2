@@ -1,114 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-html {
-  scroll-behavior: smooth;
-}
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #7e8c4a;
-}
-main {
-  min-height: 50em;
-}
-section {
-  text-align: center;
-  font-size: 0.7em;
-  padding-top: 1em;
-  color: #fff;
-}
-h2 {
-  font-weight: 500;
-}
-a {
-  text-decoration: none;
-}
-p {
-  padding-bottom: 1.5em;
-}
-.flex-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-.button {
-  color: #000;
-  display: block;
-  display: inline-block;
-  background: #fff;
-  padding: 0.3em 0.75em;
-  border-radius: 1.5em;
-  font-weight: 500;
-  margin: 0 0 1em 0;
-  text-decoration: none;
-  -webkit-box-shadow: 0.1em 0.2em 0.1em rgba(0, 6, 13, 0.25);
-          box-shadow: 0.1em 0.2em 0.1em rgba(0, 6, 13, 0.25);
-}
-.green-top {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  top: 0.2em;
-}
-.green-top svg {
-  position: relative;
-  display: block;
-  width: calc(147.3%);
-  height: 2.75em;
-  -webkit-transform: rotateY(360deg);
-          transform: rotateY(360deg);
-}
-.green-top .shape-fill {
-  fill: #7e8c4a;
-}
-.green-bottom {
-  position: relative;
-  width: 100%;
-  bottom: -1em;
-  overflow: hidden;
-  line-height: 0;
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-}
-.green-bottom svg {
-  position: relative;
-  display: block;
-  width: calc(147.3%);
-  height: 2.5em;
-  -webkit-transform: rotateY(360deg);
-          transform: rotateY(360deg);
-}
-.green-bottom .shape-fill {
-  fill: #7e8c4a;
-}
-.circle {
-  margin-top: 0.5em;
-  padding-top: 0.3em;
-  display: inline-block;
-  background-color: rgba(102, 106, 115, 0.7);
-  border-radius: 50%;
-  height: 2em;
-  width: 2em;
-}
-/* 
-===============================================
-===			        NAV                     ===
-=============================================== 
-*/
+/*-- -------------------------- -->
+<---           NAVIGATION       -->
+<--- -------------------------- -*/
+/* Mobile */
 @media only screen and (min-width: 0em) {
   .desktop-nav {
     display: none;
@@ -130,11 +23,48 @@ p {
   .mobile-nav span {
     margin-right: 10em;
   }
-  /*
-	===============================================
-	===			       LANDING                  ===
-	===============================================
-	*/
+}
+/* Tablet */
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+  .desktop-nav {
+    font-size: inherit;
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0.5em 2em;
+    color: #fff;
+    text-decoration: none;
+    background-color: rgba(0, 6, 13, 0.5);
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+  }
+  .desktop-nav ul li {
+    display: inline;
+    margin-right: 1em;
+  }
+  .desktop-nav li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .mobile-nav span {
+    display: none;
+  }
+}
+/* Large Desktop */
+/*-- -------------------------- -->
+<---           LANDING          -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
   #hero {
     position: relative;
     z-index: 1;
@@ -162,24 +92,34 @@ p {
   #hero .header h2 {
     font-weight: 300;
   }
-  /*
-	===============================================
-	===			       ABOUT                    ===
-	===============================================
-	*/
+}
+/* Tablet */
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+  #hero {
+    font-size: 1.25em;
+    padding: 3em 0;
+  }
+  #hero .wave-bottom {
+    bottom: -3.25em;
+  }
+}
+/* Large Desktop */
+/*-- -------------------------- -->
+<---           ABOUT            -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
   #about .qoute {
     padding: 0 2.5em;
     font-weight: 300;
+    margin: auto;
   }
   #about .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin: 2em 0.75em;
-  }
-  #about img {
-    border-radius: 8%;
-    margin-top: 4em;
   }
   #about .text {
     padding-left: 1em;
@@ -189,11 +129,40 @@ p {
     background: #f27405;
     margin-right: 0.75em;
   }
-  /*
-	===============================================
-	===			       SERVICES                 ===
-	===============================================
-	*/
+  #about #portrait {
+    max-width: 32vw;
+    max-height: 35vh;
+    border-radius: 5%;
+    margin-top: 2em;
+  }
+}
+/* Tablet */
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+  #about {
+    font-size: 1.05em;
+  }
+  #about .qoute {
+    max-width: 50vw;
+    margin: auto;
+  }
+  #about .container {
+    margin: 3em auto;
+    max-width: 70vw;
+  }
+  #about #portrait {
+    max-height: 25vw;
+  }
+  #about .text {
+    padding-left: 3em;
+  }
+}
+/* Large Desktop */
+/*-- -------------------------- -->
+<---           SERVICES         -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
   #services {
     position: relative;
     z-index: 1;
@@ -228,14 +197,30 @@ p {
     background-color: #fff;
     margin-bottom: 0.5em;
   }
-  #services .green-top {
+  #services .wave-top {
     top: -1em;
   }
-  /*
-	===============================================
-	===			       PORTFOLIO                ===
-	===============================================
-	*/
+}
+/* Tablet */
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+  #services {
+    font-size: 1.05em;
+  }
+  #services .container {
+    max-width: 70vw;
+    margin: 1em auto;
+  }
+  #services .wave-top {
+    top: -1.5em;
+  }
+}
+/* Large Desktop */
+/*-- -------------------------- -->
+<---           PORTFOLIO        -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
   #portfolio ul li {
     display: inline-block;
   }
@@ -249,6 +234,10 @@ p {
   #portfolio .project {
     position: relative;
     margin: 0.25em 0.25em;
+  }
+  #portfolio .project img {
+    max-width: 7.65em;
+    max-height: 8.25em;
   }
   #portfolio .hover {
     background-color: rgba(0, 6, 13, 0.7);
@@ -273,14 +262,35 @@ p {
   #portfolio .active {
     display: block;
   }
-  #portfolio .green-bottom .shape-fill {
+  #portfolio .wave-bottom .shape-fill {
     fill: #bf9b7a;
   }
-  /*
-	===============================================
-	===			       TESTIMONIALS              ===
-	===============================================
-	*/
+}
+/* Tablet */
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+  #portfolio {
+    font-size: 1.05em;
+  }
+  #portfolio .hover {
+    width: 15vw;
+    height: 30vh;
+  }
+  #portfolio .container {
+    max-width: 70vw;
+    margin: 2em auto;
+  }
+  #portfolio .project img {
+    max-width: 15vw;
+    max-height: 30vh;
+  }
+}
+/* Large Desktop */
+/*-- -------------------------- -->
+<---           TESTIMONIES      -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
   #testimonials {
     background-color: #bf9b7a;
   }
@@ -315,14 +325,18 @@ p {
   #testimonials #border .qoute {
     padding: 0 1em 0 1em;
   }
-  #testimonials .green-top {
+  #testimonials .wave-top {
     top: 1em;
   }
-  /*
-	===============================================
-	===			       PRICING                  ===
-	===============================================
-	*/
+}
+/* Tablet */
+/* Small Desktop */
+/* Large Desktop */
+/*-- -------------------------- -->
+<---           PRICING          -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
   #pricing {
     margin-top: 1em;
   }
@@ -377,14 +391,15 @@ p {
     color: #fff;
     background: #83a603;
   }
-  #pricing .green-bottom .shape-fill {
-    fill: #bf9b7a;
-  }
-  /*
-	===============================================
-	===			       CONTACT                  ===
-	===============================================
-	*/
+}
+/* Tablet */
+/* Small Desktop */
+/* Large Desktop */
+/*-- -------------------------- -->
+<---           CONTACT          -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
   #contact {
     background-color: #bf9b7a;
     color: #00060d;
@@ -448,11 +463,15 @@ p {
     font-size: 0.71428571em;
     font-family: 'Poppins', sans-serif;
   }
-  /*
-	===============================================
-	===			       FOOTER                   ===
-	===============================================
-	*/
+}
+/* Tablet */
+/* Small Desktop */
+/* Large Desktop */
+/*-- -------------------------- -->
+<---           FOOTER           -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
   #footer {
     font-size: 0.65em;
     background-color: #666a73;
@@ -466,10 +485,13 @@ p {
   #footer ul li {
     display: inline-block;
   }
-  #footer .green-top {
+  #footer .wave-top {
     top: -1em;
   }
-  #footer .green-top .shape-fill {
+  #footer .wave-top .shape-fill {
     fill: #bf9b7a;
   }
 }
+/* Tablet */
+/* Small Desktop */
+/* Large Desktop */
