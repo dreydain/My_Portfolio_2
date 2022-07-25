@@ -12,8 +12,10 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0.5em 2em;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -25,6 +27,12 @@
   }
 }
 /* Tablet */
+@media only screen and (min-width: 40em) {
+  .mobile-nav {
+    font-size: inherit;
+    padding: 0.5em 2em;
+  }
+}
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
   .desktop-nav {
@@ -94,6 +102,11 @@
   }
 }
 /* Tablet */
+@media only screen and (min-width: 40em) {
+  #hero {
+    font-size: inherit;
+  }
+}
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
   #hero {
@@ -111,18 +124,19 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
   #about .qoute {
-    padding: 0 2.5em;
     font-weight: 300;
     margin: auto;
+    max-width: 50vw;
   }
   #about .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 2em 0.75em;
+    max-width: 90vw;
+    margin: 2em auto;
   }
   #about .text {
-    padding-left: 1em;
+    padding-left: 1.5em;
     text-align: left;
   }
   #about .text #btn1 {
@@ -131,12 +145,27 @@
   }
   #about #portrait {
     max-width: 32vw;
-    max-height: 35vh;
+    max-height: 33vh;
     border-radius: 5%;
     margin-top: 2em;
   }
 }
 /* Tablet */
+@media only screen and (min-width: 40em) {
+  #about {
+    font-size: inherit;
+  }
+  #about .qoute {
+    max-width: 60vw;
+  }
+  #about .container {
+    max-width: 85vw;
+  }
+  #about #portrait {
+    max-width: 40vw;
+    max-height: 41vh;
+  }
+}
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
   #about {
@@ -183,6 +212,10 @@
     left: 0;
     z-index: -10;
   }
+  #services .container {
+    margin: 1em auto;
+    max-width: 90vw;
+  }
   #services h4 {
     font-weight: 500;
     padding-bottom: 0.5em;
@@ -198,10 +231,18 @@
     margin-bottom: 0.5em;
   }
   #services .wave-top {
-    top: -1em;
+    top: -1.5em;
   }
 }
 /* Tablet */
+@media only screen and (min-width: 40em) {
+  #services {
+    font-size: inherit;
+  }
+  #services .container {
+    max-width: 80vw;
+  }
+}
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
   #services {
@@ -267,6 +308,11 @@
   }
 }
 /* Tablet */
+@media only screen and (min-width: 40em) {
+  #portfolio {
+    font-size: inherit;
+  }
+}
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
   #portfolio {
@@ -299,9 +345,6 @@
     font-weight: 600;
     color: #000;
   }
-  #testimonials p {
-    padding: 0 1em 1em;
-  }
   #testimonials .circle {
     color: #000;
     background-color: #fff;
@@ -322,14 +365,23 @@
   #testimonials #border i {
     font-size: 1.71428571em;
   }
-  #testimonials #border .qoute {
-    padding: 0 1em 0 1em;
+  #testimonials .qoute {
+    margin: 1em auto;
+    max-width: 85vw;
   }
   #testimonials .wave-top {
     top: 1em;
   }
 }
 /* Tablet */
+@media only screen and (min-width: 40em) {
+  #testimonials {
+    font-size: inherit;
+  }
+  #testimonials .qoute {
+    max-width: 75vw;
+  }
+}
 /* Small Desktop */
 /* Large Desktop */
 /*-- -------------------------- -->
@@ -391,8 +443,27 @@
     color: #fff;
     background: #83a603;
   }
+  #pricing .wave-bottom .shape-fill {
+    fill: #bf9b7a;
+  }
 }
 /* Tablet */
+@media only screen and (min-width: 40em) {
+  #pricing {
+    font-size: inherit;
+  }
+  #pricing .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 1.5em;
+  }
+}
 /* Small Desktop */
 /* Large Desktop */
 /*-- -------------------------- -->
@@ -408,6 +479,9 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   #contact h2 {
     color: #fff;
@@ -416,55 +490,89 @@
     color: #323438;
   }
   #contact .text {
-    margin: 1em 1.75em 1em 1em;
-    max-width: 40%;
+    max-width: 30%;
+    margin: 1em 1.5em 1em 2em;
   }
-  #contact #form {
-    margin-top: 4em;
+  #contact .form-container {
+    min-width: 50%;
+    margin-top: 3.5em;
+    margin-right: 2em;
   }
-  #contact #form input {
+  #contact .form-container #form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contact .form-container #form input {
     border-radius: 0.5em;
     border-style: none;
-    margin-right: 0.25em;
     margin-bottom: 0.5em;
-    width: 45%;
     padding: 0.25em;
   }
-  #contact #form .input3 {
-    min-width: 93%;
-  }
-  #contact #form textarea {
-    min-height: 5em;
-    min-width: 93%;
+  #contact .form-container #form textarea {
+    min-height: 12vh;
     border-radius: 0.5em;
     padding: 0.25em;
     border: none;
+    margin-bottom: 0.5em;
   }
-  #contact #form .button {
+  #contact .form-container #form .button {
     background-color: #f27405;
     font-size: 0.92857143em;
     border-style: none;
-    float: right;
-    margin-right: 1.2em;
+    margin-left: 40%;
+    max-width: 60%;
   }
-  #contact #form ::-webkit-input-placeholder {
+  #contact .form-container #form ::-webkit-input-placeholder {
     font-size: 0.71428571em;
     font-family: 'Poppins', sans-serif;
   }
-  #contact #form :-ms-input-placeholder {
+  #contact .form-container #form :-ms-input-placeholder {
     font-size: 0.71428571em;
     font-family: 'Poppins', sans-serif;
   }
-  #contact #form ::-ms-input-placeholder {
+  #contact .form-container #form ::-ms-input-placeholder {
     font-size: 0.71428571em;
     font-family: 'Poppins', sans-serif;
   }
-  #contact #form ::placeholder {
+  #contact .form-container #form ::placeholder {
     font-size: 0.71428571em;
     font-family: 'Poppins', sans-serif;
   }
 }
 /* Tablet */
+@media only screen and (min-width: 40em) {
+  #contact {
+    font-size: inherit;
+  }
+  #contact .form-container #form input {
+    padding: 0.5em;
+  }
+  #contact .form-container #form textarea {
+    min-height: 15vh;
+    padding: 0.5em;
+  }
+  #contact .form-container #form ::-webkit-input-placeholder {
+    font-size: 1em;
+  }
+  #contact .form-container #form :-ms-input-placeholder {
+    font-size: 1em;
+  }
+  #contact .form-container #form ::-ms-input-placeholder {
+    font-size: 1em;
+  }
+  #contact .form-container #form ::placeholder {
+    font-size: 1em;
+  }
+  #contact .form-container #form .button {
+    max-width: 50%;
+    margin-left: 50%;
+  }
+}
 /* Small Desktop */
 /* Large Desktop */
 /*-- -------------------------- -->
@@ -493,5 +601,10 @@
   }
 }
 /* Tablet */
+@media only screen and (min-width: 40em) {
+  #footer {
+    font-size: inherit;
+  }
+}
 /* Small Desktop */
 /* Large Desktop */

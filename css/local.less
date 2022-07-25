@@ -11,7 +11,8 @@
 		background-color: rgb(0, 6, 13);
 		color: white;
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
+		padding: 0.5em 2em;
 		align-items: center;
 		font-size: 14/20em;
 		width: 100vw;
@@ -23,7 +24,12 @@
 }
 
 /* Tablet */
-@media only screen and (min-width: 48em) {
+
+@media only screen and (min-width: 40em) {
+	.mobile-nav {
+		font-size: inherit;
+		padding: 0.5em 2em;
+	}
 }
 
 /* Small Desktop */
@@ -103,7 +109,10 @@
 }
 
 /* Tablet */
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 40em) {
+	#hero {
+		font-size: inherit;
+	}
 }
 
 /* Small Desktop */
@@ -129,18 +138,19 @@
 @media only screen and (min-width: 0em) {
 	#about {
 		.qoute {
-			padding: 0 2.5em;
 			font-weight: 300;
 			margin: auto;
+			max-width: 50vw;
 		}
 
 		.container {
 			display: flex;
-			margin: 2em 0.75em;
+			max-width: 90vw;
+			margin: 2em auto;
 		}
 
 		.text {
-			padding-left: 1em;
+			padding-left: 1.5em;
 			text-align: left;
 
 			#btn1 {
@@ -151,7 +161,7 @@
 
 		#portrait {
 			max-width: 32vw;
-			max-height: 35vh;
+			max-height: 33vh;
 			border-radius: 5%;
 			margin-top: 2em;
 		}
@@ -159,7 +169,21 @@
 }
 
 /* Tablet */
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 40em) {
+	#about {
+		font-size: inherit;
+		.qoute {
+			max-width: 60vw;
+		}
+		.container {
+			max-width: 85vw;
+		}
+
+		#portrait {
+			max-width: 40vw;
+			max-height: 41vh;
+		}
+	}
 }
 
 /* Small Desktop */
@@ -216,6 +240,10 @@
 			left: 0;
 			z-index: -10;
 		}
+		.container {
+			margin: 1em auto;
+			max-width: 90vw;
+		}
 
 		h4 {
 			font-weight: 500;
@@ -236,13 +264,20 @@
 		}
 
 		.wave-top {
-			top: -1em;
+			top: -1.5em;
 		}
 	}
 }
 
 /* Tablet */
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 40em) {
+	#services {
+		font-size: inherit;
+
+		.container {
+			max-width: 80vw;
+		}
+	}
 }
 
 /* Small Desktop */
@@ -320,7 +355,10 @@
 }
 
 /* Tablet */
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 40em) {
+	#portfolio {
+		font-size: inherit;
+	}
 }
 
 /* Small Desktop */
@@ -364,9 +402,9 @@
 			color: #000;
 		}
 
-		p {
-			padding: 0 1em 1em;
-		}
+		// p {
+		// 	padding: 0 1em 1em;
+		// }
 
 		.circle {
 			color: #000;
@@ -388,10 +426,10 @@
 			i {
 				font-size: 24/14em;
 			}
-
-			.qoute {
-				padding: 0 1em 0 1em;
-			}
+		}
+		.qoute {
+			margin: 1em auto;
+			max-width: 85vw;
 		}
 
 		.wave-top {
@@ -401,7 +439,14 @@
 }
 
 /* Tablet */
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 40em) {
+	#testimonials {
+		font-size: inherit;
+
+		.qoute {
+			max-width: 75vw;
+		}
+	}
 }
 
 /* Small Desktop */
@@ -480,11 +525,25 @@
 				}
 			}
 		}
+
+		.wave-bottom .shape-fill {
+			fill: #bf9b7a;
+		}
 	}
 }
 
 /* Tablet */
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 40em) {
+	#pricing {
+		font-size: inherit;
+
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-left: 1.5em;
+		}
+	}
 }
 
 /* Small Desktop */
@@ -506,6 +565,7 @@
 		text-align: left;
 		padding-bottom: 1em;
 		display: flex;
+		justify-content: space-between;
 
 		h2 {
 			color: #fff;
@@ -516,50 +576,73 @@
 		}
 
 		.text {
-			margin: 1em 1.75em 1em 1em;
-			max-width: 40%;
+			max-width: 30%;
+			margin: 1em 1.5em 1em 2em;
 		}
 
-		#form {
-			margin-top: 4em;
-			input {
-				border-radius: 0.5em;
-				border-style: none;
-				margin-right: 0.25em;
-				margin-bottom: 0.5em;
-				width: 45%;
-				padding: 0.25em;
-			}
+		.form-container {
+			min-width: 50%;
+			margin-top: 3.5em;
+			margin-right: 2em;
 
-			.input3 {
-				min-width: 93%;
-			}
-
-			textarea {
-				min-height: 100/20em;
-				min-width: 93%;
-				border-radius: 0.5em;
-				padding: 0.25em;
-				border: none;
-			}
-
-			.button {
-				background-color: #f27405;
-				font-size: 13/14em;
-				border-style: none;
-				float: right;
-				margin-right: 1.2em;
-			}
-			::placeholder {
-				font-size: 10/14em;
-				font-family: 'Poppins', sans-serif;
+			#form {
+				display: flex;
+				flex-direction: column;
+				input {
+					border-radius: 0.5em;
+					border-style: none;
+					margin-bottom: 0.5em;
+					padding: 0.25em;
+				}
+				textarea {
+					min-height: 12vh;
+					border-radius: 0.5em;
+					padding: 0.25em;
+					border: none;
+					margin-bottom: 0.5em;
+				}
+				.button {
+					background-color: #f27405;
+					font-size: 13/14em;
+					border-style: none;
+					margin-left: 40%;
+					max-width: 60%;
+				}
+				::placeholder {
+					font-size: 10/14em;
+					font-family: 'Poppins', sans-serif;
+				}
 			}
 		}
 	}
 }
 
 /* Tablet */
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 40em) {
+	#contact {
+		font-size: inherit;
+
+		.form-container {
+			#form {
+				input {
+					padding: 0.5em;
+				}
+				textarea {
+					min-height: 15vh;
+
+					padding: 0.5em;
+				}
+
+				::placeholder {
+					font-size: 14/14em;
+				}
+				.button {
+					max-width: 50%;
+					margin-left: 50%;
+				}
+			}
+		}
+	}
 }
 
 /* Small Desktop */
@@ -601,7 +684,10 @@
 }
 
 /* Tablet */
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 40em) {
+	#footer {
+		font-size: inherit;
+	}
 }
 
 /* Small Desktop */
