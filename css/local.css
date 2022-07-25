@@ -211,6 +211,9 @@
   #about {
     font-size: 1.2em;
   }
+  #about .text {
+    max-width: 45vw;
+  }
 }
 /*-- -------------------------- -->
 <---           SERVICES         -->
