@@ -39,10 +39,10 @@
 		display: block;
 		display: flex;
 		justify-content: space-between;
-		padding: 0.5em 2em;
+		padding: 0.5em 4em;
 		color: #fff;
 		text-decoration: none;
-		background-color: rgba(0, 6, 13, 0.5);
+		background-color: rgba(0, 6, 13, 0.85);
 		position: fixed;
 		z-index: 10;
 		width: 100vw;
@@ -56,6 +56,10 @@
 			text-decoration: none;
 			color: #fff;
 		}
+
+		.active {
+			color: #f27405;
+		}
 	}
 	.mobile-nav {
 		display: none;
@@ -68,6 +72,9 @@
 
 /* Large Desktop */
 @media only screen and (min-width: 1300px) {
+	.desktop-nav {
+		font-size: inherit;
+	}
 }
 
 /*-- -------------------------- -->
@@ -104,6 +111,9 @@
 			h2 {
 				font-weight: 300;
 			}
+			h2 {
+				margin-bottom: 0;
+			}
 		}
 	}
 }
@@ -119,16 +129,24 @@
 @media only screen and (min-width: 64em) {
 	#hero {
 		font-size: 25/20em;
-		padding: 3em 0;
+		padding-top: 4em;
 
 		.wave-bottom {
-			bottom: -3.25em;
+			bottom: -1em;
 		}
 	}
 }
 
 /* Large Desktop */
 @media only screen and (min-width: 1300px) {
+	#hero {
+		font-size: 28/20em;
+		padding: 2.5em 0;
+
+		.wave-bottom {
+			bottom: -2.75em;
+		}
+	}
 }
 /*-- -------------------------- -->
 <---           ABOUT            -->
@@ -213,6 +231,9 @@
 
 /* Large Desktop */
 @media only screen and (min-width: 1300px) {
+	#about {
+		font-size: 24/20em;
+	}
 }
 /*-- -------------------------- -->
 <---           SERVICES         -->
@@ -297,6 +318,9 @@
 
 /* Large Desktop */
 @media only screen and (min-width: 1300px) {
+	#services {
+		font-size: 24/20em;
+	}
 }
 /*-- -------------------------- -->
 <---           PORTFOLIO        -->
@@ -314,8 +338,9 @@
 		}
 
 		.container {
-			margin-top: 2em;
 			padding-bottom: 3em;
+			margin: 1em auto;
+			max-width: 80vw;
 		}
 
 		.project {
@@ -323,20 +348,19 @@
 			margin: 0.25em 0.25em;
 
 			img {
-				max-width: 7.65em;
-				max-height: 8.25em;
+				max-width: 9.65em;
+				max-height: 10.25em;
 			}
 		}
 
 		.hover {
 			background-color: rgba(0, 6, 13, 0.7);
-			width: 7.65em;
-			height: 8.25em;
+			width: 9.65em;
+			height: 10.25em;
+			padding-top: 15%;
 			position: absolute;
 			top: 0em;
-			display: flex;
-			flex-direction: column;
-			align-content: space-between;
+
 			display: none;
 
 			h4 {
@@ -367,8 +391,9 @@
 		font-size: 21/20em;
 
 		.hover {
-			width: 15vw;
-			height: 30vh;
+			width: 10.65em;
+			height: 11.25em;
+			padding: 15%;
 		}
 		.container {
 			max-width: 70vw;
@@ -377,8 +402,8 @@
 
 		.project {
 			img {
-				max-width: 15vw;
-				max-height: 30vh;
+				max-width: 10.65em;
+				max-height: 11.25em;
 			}
 		}
 	}
@@ -386,6 +411,22 @@
 
 /* Large Desktop */
 @media only screen and (min-width: 1300px) {
+	#portfolio {
+		font-size: 24/20em;
+
+		.project {
+			img {
+				max-width: 12.65em;
+				max-height: 13.25em;
+			}
+		}
+
+		.hover {
+			width: 12.65em;
+			height: 13.25em;
+			padding-top: 25%;
+		}
+	}
 }
 /*-- -------------------------- -->
 <---           TESTIMONIES      -->
@@ -451,10 +492,20 @@
 
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
+	#testimonials {
+		font-size: inherit;
+	}
 }
 
 /* Large Desktop */
 @media only screen and (min-width: 1300px) {
+	#testimonials {
+		font-size: 24/20em;
+
+		.qoute {
+			max-width: 50vw;
+		}
+	}
 }
 /*-- -------------------------- -->
 <---           PRICING          -->
@@ -485,7 +536,6 @@
 
 		.container {
 			color: #666a73;
-			margin-top: 0.75em;
 
 			.card {
 				background-color: #fff;
@@ -495,7 +545,7 @@
 				border-radius: 1em;
 				height: 20em;
 				width: 16em;
-				margin: 1em auto;
+				margin: 0.5em auto;
 
 				.head {
 					background-color: #666a73;
@@ -541,17 +591,30 @@
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
-			margin-left: 1.5em;
+
+			.card {
+				margin: 1.5em;
+			}
 		}
 	}
 }
 
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
+	#pricing {
+		font-size: inherit;
+
+		.container {
+			margin-left: 1.5em;
+		}
+	}
 }
 
 /* Large Desktop */
 @media only screen and (min-width: 1300px) {
+	#pricing {
+		font-size: 24/20em;
+	}
 }
 /*-- -------------------------- -->
 <---           CONTACT          -->
@@ -647,10 +710,52 @@
 
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
+	#contact {
+		font-size: inherit;
+
+		.text {
+			margin-left: 4.5em;
+		}
+
+		.form-container {
+			margin-right: 4.5em;
+
+			#form {
+				textarea {
+					min-height: 18vh;
+				}
+
+				.button {
+					max-width: 40%;
+					margin-left: 60%;
+				}
+			}
+		}
+	}
 }
 
 /* Large Desktop */
 @media only screen and (min-width: 1300px) {
+	#contact {
+		font-size: 24/20em;
+
+		.form-container {
+			max-width: 25vw;
+			#form {
+				max-width: 35vw;
+				.button {
+					max-width: 40%;
+					margin-left: 60%;
+				}
+				::placeholder {
+					font-size: 18/14em;
+				}
+				input {
+					padding: 0.75em;
+				}
+			}
+		}
+	}
 }
 /*-- -------------------------- -->
 <---           FOOTER           -->
@@ -663,6 +768,7 @@
 		background-color: #666a73;
 		text-align: center;
 		color: #fff;
+		padding-bottom: 1.5em;
 
 		.circle {
 			margin: 1em 0.2em;
@@ -692,8 +798,14 @@
 
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
+	#footer {
+		font-size: inherit;
+	}
 }
 
 /* Large Desktop */
 @media only screen and (min-width: 1300px) {
+	#footer {
+		font-size: inherit;
+	}
 }
