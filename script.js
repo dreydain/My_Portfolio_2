@@ -1,8 +1,12 @@
 'use strict';
 const sections = document.querySelectorAll('section');
 const navBtns = document.querySelectorAll('.link');
+const mobileNav = document.querySelector('.nav-list');
+const hamburger = document.getElementById('hamburger');
+const screen = window.innerWidth;
+mobileNav.style.maxHeight = '0px';
 
-// Desktop Navigation
+// Navigation
 window.addEventListener('scroll', () => {
 	let current = '';
 
@@ -23,15 +27,15 @@ window.addEventListener('scroll', () => {
 	});
 });
 
-// function removeActiveClasses() {
-// 	navBtns.forEach((btn) => {
-// 		btn.classList.remove('active');
-// 	});
-// }
-
-// navBtns.forEach((btn) => {
-// 	btn.addEventListener('click', () => {
-// 		removeActiveClasses();
-// 		btn.classList.add('active');
-// 	});
-// });
+// Mobile Navigation
+hamburger.addEventListener('click', () => {
+	if (mobileNav.style.maxHeight === '0px') {
+		mobileNav.style.maxHeight = 'fit-content';
+		mobileNav.style.opacity = '1';
+		mobileNav.style.padding = '0.5em 0';
+	} else {
+		mobileNav.style.maxHeight = '0px';
+		mobileNav.style.opacity = '0';
+		mobileNav.style.padding = '0';
+	}
+});

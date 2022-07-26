@@ -3,76 +3,64 @@
 <--- -------------------------- -*/
 /* Mobile */
 @media only screen and (min-width: 0em) {
-  .desktop-nav {
-    display: none;
-  }
-  .mobile-nav {
-    background-color: #00060d;
-    color: white;
+  nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 0.5em 2em;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: 0.7em;
+    background-color: rgba(0, 6, 13, 0.85);
+    color: #fff;
+    position: fixed;
     width: 100vw;
+    z-index: 20;
   }
-  .mobile-nav span {
-    margin-right: 10em;
+  nav #hamburger {
+    margin-left: 5.5em;
+  }
+  nav .nav-list {
+    list-style: none;
+    text-align: right;
+    opacity: 0;
+  }
+  nav .nav-list li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  nav .nav-list .active {
+    color: #f27405;
   }
 }
 /* Tablet */
 @media only screen and (min-width: 40em) {
-  .mobile-nav {
+  nav {
     font-size: inherit;
-    padding: 0.5em 2em;
+    padding: 0.25em 1em;
   }
 }
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
-  .desktop-nav {
+  nav {
     font-size: inherit;
+  }
+  nav #hamburger {
+    display: none;
+  }
+  nav .nav-list {
     display: block;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 0.5em 4em;
-    color: #fff;
-    text-decoration: none;
-    background-color: rgba(0, 6, 13, 0.85);
-    position: fixed;
-    z-index: 10;
-    width: 100vw;
+    opacity: 1;
   }
-  .desktop-nav ul li {
-    display: inline;
+  nav .nav-list li {
     margin-right: 1em;
-  }
-  .desktop-nav li a {
-    text-decoration: none;
-    color: #fff;
-  }
-  .desktop-nav .active {
-    color: #f27405;
-  }
-  .mobile-nav {
-    display: none;
-  }
-  .mobile-nav span {
-    display: none;
   }
 }
 /* Large Desktop */
 @media only screen and (min-width: 1300px) {
-  .desktop-nav {
+  nav {
     font-size: inherit;
   }
 }
