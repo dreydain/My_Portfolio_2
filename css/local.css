@@ -146,6 +146,7 @@
   #about .qoute {
     font-weight: 300;
     margin: auto;
+    padding-top: 1.5em;
     max-width: 50vw;
   }
   #about .container {
@@ -213,6 +214,9 @@
   }
   #about .text {
     max-width: 45vw;
+  }
+  #about #portrait {
+    max-height: 30vw;
   }
 }
 /*-- -------------------------- -->
@@ -543,7 +547,7 @@
     background-color: #bf9b7a;
     color: #00060d;
     text-align: left;
-    padding-bottom: 1em;
+    padding: 4em 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
