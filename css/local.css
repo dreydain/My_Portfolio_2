@@ -309,49 +309,27 @@
   }
   #portfolio #one:hover div#o-one {
     display: block;
-    -webkit-animation: fadeIn 1s;
-            animation: fadeIn 1s;
+    opacity: 1;
   }
   #portfolio #two:hover div#o-two {
     display: block;
-    -webkit-animation: fadeIn 1s;
-            animation: fadeIn 1s;
+    opacity: 1;
   }
   #portfolio #three:hover div#o-three {
     display: block;
-    -webkit-animation: fadeIn 1s;
-            animation: fadeIn 1s;
+    opacity: 1;
   }
   #portfolio #four:hover div#o-four {
     display: block;
-    -webkit-animation: fadeIn 1s;
-            animation: fadeIn 1s;
+    opacity: 1;
   }
   #portfolio #five:hover div#o-five {
     display: block;
-    -webkit-animation: fadeIn 1s;
-            animation: fadeIn 1s;
+    opacity: 1;
   }
   #portfolio #six:hover div#o-six {
     display: block;
-    -webkit-animation: fadeIn 1s;
-            animation: fadeIn 1s;
-  }
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+    opacity: 1;
   }
   #portfolio .overlay {
     background-color: rgba(0, 6, 13, 0.7);
@@ -361,6 +339,8 @@
     position: absolute;
     top: 0em;
     opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
   }
   #portfolio .overlay h4 {
     padding: 1em 0 0.25em;

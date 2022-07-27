@@ -356,36 +356,27 @@
 
 		#one:hover div#o-one {
 			display: block;
-			animation: fadeIn 1s;
+			opacity: 1;
 		}
 		#two:hover div#o-two {
 			display: block;
-			animation: fadeIn 1s;
+			opacity: 1;
 		}
 		#three:hover div#o-three {
 			display: block;
-			animation: fadeIn 1s;
+			opacity: 1;
 		}
 		#four:hover div#o-four {
 			display: block;
-			animation: fadeIn 1s;
+			opacity: 1;
 		}
 		#five:hover div#o-five {
 			display: block;
-			animation: fadeIn 1s;
+			opacity: 1;
 		}
 		#six:hover div#o-six {
 			display: block;
-			animation: fadeIn 1s;
-		}
-
-		@keyframes fadeIn {
-			0% {
-				opacity: 0;
-			}
-			100% {
-				opacity: 1;
-			}
+			opacity: 1;
 		}
 
 		.overlay {
@@ -396,6 +387,7 @@
 			position: absolute;
 			top: 0em;
 			opacity: 0;
+			transition: opacity 0.5s;
 
 			h4 {
 				padding: 1em 0 0.25em;
