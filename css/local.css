@@ -14,6 +14,7 @@
     color: #fff;
     position: fixed;
     width: 100vw;
+    padding: 0.2em 0.5em;
     z-index: 20;
   }
   nav #hamburger {
@@ -306,16 +307,62 @@
     max-width: 9.65em;
     max-height: 10.25em;
   }
-  #portfolio .hover {
+  #portfolio #one:hover div#o-one {
+    display: block;
+    -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+  }
+  #portfolio #two:hover div#o-two {
+    display: block;
+    -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+  }
+  #portfolio #three:hover div#o-three {
+    display: block;
+    -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+  }
+  #portfolio #four:hover div#o-four {
+    display: block;
+    -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+  }
+  #portfolio #five:hover div#o-five {
+    display: block;
+    -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+  }
+  #portfolio #six:hover div#o-six {
+    display: block;
+    -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+  }
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  #portfolio .overlay {
     background-color: rgba(0, 6, 13, 0.7);
     width: 9.65em;
     height: 10.25em;
     padding-top: 15%;
     position: absolute;
     top: 0em;
-    display: none;
+    opacity: 0;
   }
-  #portfolio .hover h4 {
+  #portfolio .overlay h4 {
     padding: 1em 0 0.25em;
   }
   #portfolio .active {
@@ -336,7 +383,7 @@
   #portfolio {
     font-size: 1.05em;
   }
-  #portfolio .hover {
+  #portfolio .overlay {
     width: 10.65em;
     height: 11.25em;
     padding: 15%;
@@ -359,7 +406,7 @@
     max-width: 12.65em;
     max-height: 13.25em;
   }
-  #portfolio .hover {
+  #portfolio .overlay {
     width: 12.65em;
     height: 13.25em;
     padding-top: 25%;

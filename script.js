@@ -3,7 +3,9 @@ const sections = document.querySelectorAll('section');
 const navBtns = document.querySelectorAll('.link');
 const mobileNav = document.querySelector('.nav-list');
 const hamburger = document.getElementById('hamburger');
-const screen = window.innerWidth;
+
+const projects = document.querySelectorAll('.project');
+
 mobileNav.style.maxHeight = '0px';
 
 // Navigation
@@ -27,7 +29,7 @@ window.addEventListener('scroll', () => {
 	});
 });
 
-// Mobile Navigation
+// Mobile Navigation Display
 hamburger.addEventListener('click', () => {
 	if (mobileNav.style.maxHeight === '0px') {
 		mobileNav.style.maxHeight = 'fit-content';

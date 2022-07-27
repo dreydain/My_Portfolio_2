@@ -11,6 +11,7 @@
 		color: #fff;
 		position: fixed;
 		width: 100vw;
+		padding: 0.2em 0.5em;
 		z-index: 20;
 
 		#hamburger {
@@ -19,6 +20,7 @@
 		.nav-list {
 			list-style: none;
 			text-align: right;
+
 			opacity: 0;
 
 			li a {
@@ -352,15 +354,48 @@
 			}
 		}
 
-		.hover {
+		#one:hover div#o-one {
+			display: block;
+			animation: fadeIn 1s;
+		}
+		#two:hover div#o-two {
+			display: block;
+			animation: fadeIn 1s;
+		}
+		#three:hover div#o-three {
+			display: block;
+			animation: fadeIn 1s;
+		}
+		#four:hover div#o-four {
+			display: block;
+			animation: fadeIn 1s;
+		}
+		#five:hover div#o-five {
+			display: block;
+			animation: fadeIn 1s;
+		}
+		#six:hover div#o-six {
+			display: block;
+			animation: fadeIn 1s;
+		}
+
+		@keyframes fadeIn {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+
+		.overlay {
 			background-color: rgba(0, 6, 13, 0.7);
 			width: 9.65em;
 			height: 10.25em;
 			padding-top: 15%;
 			position: absolute;
 			top: 0em;
-
-			display: none;
+			opacity: 0;
 
 			h4 {
 				padding: 1em 0 0.25em;
@@ -389,7 +424,7 @@
 	#portfolio {
 		font-size: 21/20em;
 
-		.hover {
+		.overlay {
 			width: 10.65em;
 			height: 11.25em;
 			padding: 15%;
@@ -420,7 +455,7 @@
 			}
 		}
 
-		.hover {
+		.overlay {
 			width: 12.65em;
 			height: 13.25em;
 			padding-top: 25%;
