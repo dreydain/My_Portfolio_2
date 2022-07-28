@@ -27,6 +27,7 @@ h2 {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 p {
   padding-bottom: 1.5em;
